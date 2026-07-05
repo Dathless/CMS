@@ -2,6 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: "http://localhost:8000/api/v1",
+  timeout: 10000,
   headers: { "Content-Type": "application/json" },
 });
 
@@ -24,7 +25,7 @@ api.interceptors.response.use(
         try {
           const res = await axios.post(
             "http://localhost:8000/api/v1/auth/refresh",
-            { refresh_token: refreshToken }
+            { refresh_token: refreshToken },
           );
           localStorage.setItem("access_token", res.data.access_token);
           localStorage.setItem("refresh_token", res.data.refresh_token);
@@ -37,7 +38,7 @@ api.interceptors.response.use(
       }
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export default api;
