@@ -1,0 +1,61 @@
+
+# Môi trường ảo (Virtual Environment)
+be/venv/
+be/env/
+be/ENV/
+
+# File cache biên dịch của Python
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Cơ sở dữ liệu SQLite thực tế (Giữ lại file seed, không push data sinh viên)
+be/database.db
+be/app/database.db
+*.db
+*.sqlite3
+
+# Môi trường cấu hình bí mật (nếu có sau này)
+be/.env
+be/secret.json
+
+# Khác
+be/.pytest_cache/
+be/.history/
+
+# Thư mục chứa thư viện đã cài đặt
+fe/node_modules/
+
+# Thư mục build đầu ra của Vite
+fe/dist/
+fe/dist-ssr/
+fe/*.local
+
+# Nhật ký lỗi của npm / yarn
+fe/npm-debug.log*
+fe/yarn-debug.log*
+fe/yarn-error.log*
+fe/.pnpm-debug.log*
+
+# Cấu hình môi trường local của Frontend
+fe/.env.local
+fe/.env.development.local
+fe/.env.test.local
+fe/.env.production.local
+
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Desktop.ini
+
+# Thư mục cấu hình của VS Code hoặc WebStorm/PyCharm
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
